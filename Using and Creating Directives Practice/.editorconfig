@@ -1,0 +1,6 @@
+[*.{.js,.vue,.html,.css,.json}]
+indent_size = 2
+indent_style = space
+
+[Markdown]
+trim_trailing_whitespace = false

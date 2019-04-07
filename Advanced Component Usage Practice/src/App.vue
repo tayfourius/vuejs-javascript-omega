@@ -1,0 +1,39 @@
+<template>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <br>
+                    <button class="btn btn-primary" @click="isSelected='appBlue'">Load Blue Template</button>
+                    <button class="btn btn-success" @click="isSelected='appGreen'">Load Green Template</button>
+                    <button class="btn btn-danger" @click="isSelected='appRed'">Load Red Template</button>
+                    <hr>
+                    <component :is="isSelected">
+                        <h1>Cloud</h1>
+                        <p>The possibilities of cloud are practically endless. It is our job to provide you with perfect solutions and adapt them to your business requirements. 
+                        </p>
+                    </component>
+
+
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        import Blue from './components/Blue.vue';
+        import Green from './components/Green.vue';
+        import Red from './components/Red.vue';
+
+        export default {
+            data: function(){
+            return {
+                isSelected: 'appBlue'
+                }
+            },
+            components: {
+                appBlue: Blue,
+                appGreen: Green,
+                appRed: Red
+            }
+        }
+    </script>
